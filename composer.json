@@ -1,0 +1,19 @@
+{
+    "require": {
+        "spaceonfire/bitrix-tools": "^0.7.2",
+        "andreyryabin/sprint.migration": "^3.15"
+    },
+    "extra": {
+        "installer-paths": {
+            "bitrix/modules/{$name}/": [
+                "type:bitrix-module",
+                "type:bitrix-d7-module"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Pwd\\": "local/class/pwd/"
+        }
+    }
+}

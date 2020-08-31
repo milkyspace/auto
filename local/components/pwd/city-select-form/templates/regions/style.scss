@@ -1,0 +1,58 @@
+.section-city-select-regions {
+    .group {
+        h2 {
+            margin: 0 0 30px;
+            color: #121212;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .link-list {
+            margin: 0 0 50px;
+            column-count: 6;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                > li {
+                    a {
+                        display: inline-block;
+                        font-size: 14px;
+                        color: #555555;
+
+                        &.active {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 1199px) {
+        .group {
+            .link-list {
+                column-count: 4;
+            }
+        }
+    }
+
+    @media(max-width: 991px) {
+        .group {
+            .link-list {
+                column-count: 3;
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .group {
+            .link-list {
+                column-count: 2;
+            }
+        }
+    }
+}

@@ -13,7 +13,7 @@ $asset->addCss($this->GetFolder().'/tariff-calc/dist/css/app.css');
     <div class="modal-calc">
         <button class="close-modal" type="button" data-dismiss="modal">
             <svg class="icon icon-close_big close-modal__ico">
-                <use xlink:href="/local/assets/build/img/svg-sprite/sprite.svg#close_big"></use>
+                <use xlink:href="/local/asset/build/img/svg-sprite/sprite.svg#close_big"></use>
             </svg>
         </button>
         <div class="modal-calc__title"><?=Loc::getMessage('CALAC_NAME_MODAL_FIRST')?> <span class="blue-text font-black"><?=Loc::getMessage('CALAC_NAME_MODAL_SECOND')?></span></div>

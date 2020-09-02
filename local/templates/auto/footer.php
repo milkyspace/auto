@@ -10,7 +10,7 @@ global $CITY, $USER;
 ?>
 <section class="footer">
     <div class="container">
-        <img src="/local/assets/img/svg/logo_end.svg" class="logo_end">
+        <img src="/local/asset/img/svg/logo_end.svg" class="logo_end">
         <h4 class="footer_ooo">ОГРН 1195476042651 ИНН 5405042720
             © ООО «СД-АВТО» 2020 г. </h4>
         <p class="footer_text">Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
@@ -36,11 +36,11 @@ global $CITY, $USER;
 <!-- Modal free -->
 <div style="display: none;" id="modal-free">
     <h2>Бесплатно подберем автомобиль по вашим параметрам в лучшем состоянии!</h2>
-    <img src="/local/assets/img/mod_1.png" class="form_icon">
+    <img src="/local/asset/img/mod_1.png" class="form_icon">
     <p class="form_text_icon">Вы уже выбрали или выбираете нужный вам автомобиль, в автосалоне или на сайтах drom.ru /
         auto.ru и т.д.
     </p>
-    <img src="/local/assets/img/mod_2.png" class="form_icon">
+    <img src="/local/asset/img/mod_2.png" class="form_icon">
     <p class="form_text_icon">Наш специалист готов выехать и провести осмотр, показывая вам все дефекты и недочеты,
         чтобы обезопасить вас от выбора некачественного авто.</p>
 

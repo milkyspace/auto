@@ -55,7 +55,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -93,7 +93,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -119,7 +119,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -153,7 +153,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -179,7 +179,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -205,7 +205,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                                 <td>
                                     <span class="<?= $class ?>">
                                         <svg class="icon <?= $icon ?> <?= $svg ?>">
-                                          <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
+                                          <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#<?= $check ?>"></use>
                                         </svg>
                                     </span>
                                 </td>
@@ -215,7 +215,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
                             <td colspan="4"><a class="more-btn" id="show-table-row" href="javascript: void(0);">Развернуть
                                     тарифы
                                     <svg class="icon icon-arrow_down more-btn__svg">
-                                        <use xlink:href="/local/assets/app/img/svg-sprite/sprite.svg#arrow_down"></use>
+                                        <use xlink:href="/local/asset/app/img/svg-sprite/sprite.svg#arrow_down"></use>
                                     </svg>
                                 </a></td>
                         </tr>

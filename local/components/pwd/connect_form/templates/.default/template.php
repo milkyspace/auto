@@ -8,7 +8,7 @@
         <input type="text" id="phone-modal" name="form[phone]" class="search_form_fild" placeholder="Номер телефона" required>
         <div class="button_main">
             <button type="submit" class="search_form_submit">Отправить заявку<img
-                        src="/local/assets/img/svg/send.svg"
+                        src="/local/asset/img/svg/send.svg"
                         class="button_send"></button>
 
             <h4 class="search_form_text">*Я даю согласие на обработку персональных данных
@@ -17,7 +17,7 @@
 
     </div>
 </form>
-<img src="/local/assets/img/svg/suppot.svg" class="form_icon">
+<img src="/local/asset/img/svg/suppot.svg" class="form_icon">
 <p class="form_text_icon">Бесплатно перезвоним и проконсультируем по всем вопросам Автокредитования</p>
 <p class="form_request">Отправка заявки не обязывает
     Вас брать кредит</p>

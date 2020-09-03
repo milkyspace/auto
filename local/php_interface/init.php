@@ -20,11 +20,13 @@ $IS_BOT = $IS_BOT || (\preg_match('#(bingbot|googlebot|dotbot|mail\.ru_bot|yadir
 $IS_BOT = $IS_BOT || (\preg_match('#yandex(bot|images|turbo|accessibilitybot|mobilebot|market)#', $userAgent) > 0);
 
 $CITY_DETECTION = $_COOKIE['city_detection'] ?: null;
+if ($CITY_DETECTION == 'unknown') {
+    $CITY_DETECTION = null;
+}
 $cityObject = \CIBlockElement::GetList([], [
     'IBLOCK_ID' => CityTable::getIblockId(),
     'CODE' => $CITY_DETECTION ?? $_GET['uri_city_code'] ?? 'novosibirsk',
 ], false, false, []);
-
 if ($cityObject->SelectedRowsCount() === 0) {
     \AddEventHandler('main', 'OnProlog', static function () {
         global $APPLICATION, $CITY;
@@ -143,7 +145,7 @@ if (isset($_GET['uri_city_code'])) {
     $seoPath = \str_replace("/{$seoCityCode}/", '/', $seoPath);
     $seoType = 'subdirectory';
     \setcookie('city_detection', $_GET['uri_city_code'], \strtotime('today +1 year'), '/');
-    $url = \str_replace('/?uri_city_code='.$_GET['uri_city_code'], '/', $_SERVER['REQUEST_URI']);
+    $url = \str_replace('/?uri_city_code=' . $_GET['uri_city_code'], '/', $_SERVER['REQUEST_URI']);
     LocalRedirect($url);
 }
 
@@ -234,4 +236,4 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest') {
         $props['MAP']['VALUE']
     ], $content);
 })
-    ?>
+?>

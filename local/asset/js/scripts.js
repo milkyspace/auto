@@ -100,9 +100,21 @@ var formBottom = (function () {
 	};
 })();
 
+var modal = (function () {
+	var closeModal = function () {
+		jQuery('.order').click(function () {
+			$.modal.close();
+		})
+	};
+	return {
+		closeModal: closeModal,
+	};
+})();
+
 $(function () {
 	anchorScroll.init();
 	calculator.init();
 	formBottom.sendForm();
 	formBottom.mask();
+	modal.closeModal();
 });

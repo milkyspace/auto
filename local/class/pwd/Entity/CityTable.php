@@ -17,6 +17,6 @@ class CityTable extends IblockElement
 	 */
 	public static function getIblockCode(): string
 	{
-		return 'city';
+		return 'CITY';
 	}
 }

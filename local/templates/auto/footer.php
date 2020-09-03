@@ -45,7 +45,7 @@ global $CITY, $USER;
         чтобы обезопасить вас от выбора некачественного авто.</p>
 
     <div class="botton_green_first">
-        <a href="#one_click" class="anchor-scroll button_first">Заказать бесплатный подбор</a>
+        <a href="#one_click" class="anchor-scroll button_first order">Заказать бесплатный подбор</a>
 
     </div>
 </div>

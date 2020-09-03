@@ -43,14 +43,14 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 
                 <nav class="icon_city">
                     <img src="/local/asset/img/svg/city1.svg" class="icon_city1"><a href="#">Ваш город:</a>
-                    <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk"><?=$CITY->fields['NAME']?> </p></a>
+                    <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p></a>
                 </nav>
                 <nav class="icon_geo">
                     <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
-                    <a href="#contacts" class="anchor-scroll">ул. Кирова 113/3 офис 311</a>
+                    <a href="#contacts" class="anchor-scroll">#CITY_ADDRESS#</a>
                 </nav>
                 <nav class="icon_call">
-                    <img src="/local/asset/img/svg/call.svg" class="icon_call1"><a href="tel:83832479777">8(383)247-9-777</a>
+                    <img src="/local/asset/img/svg/call.svg" class="icon_call1"><a href="tel:#CITY_PHONE#">#CITY_PHONE#</a>
                 </nav>
                 <nav class="icon_number">
                     <!--					<a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->

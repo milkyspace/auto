@@ -22,8 +22,8 @@ global $CITY, $USER;
             операций № 2673 от 24.03.2015 , Учётный номер в Росфинмониторинге: 704012178</p>
         <p class="footer_text">
             Copyrights © 2017 All Rights Reserved Inc.</p>
-        <a href="#" class="footer_doc">Агентский договор</a>
-        <a href="#" class="footer_doc footer_marg">Лицензия</a>
+        <a href="/local/doc/dogovor-bank.pdf" class="footer_doc">Агентский договор</a>
+        <a href="/local/doc/litsenzia_Tinkoff.pdf" class="footer_doc footer_marg">Лицензия</a>
     </div>
 
 </section>

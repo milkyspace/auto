@@ -1012,6 +1012,87 @@ img.mobile_boy_pic{
     display: none;
 }
 
+#modal-free{
+    width: 660px !important;
+    height: 502px !important;
+    max-width: inherit !important;
+}
+
+#modal-free h2{
+    position: absolute;
+    left: 9.55%;
+    right: 8.48%;
+    top: 12.15%;
+    bottom: 74.7%;
+    font-family: Graphik;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 136%;
+    letter-spacing: 0.055em;
+}
+
+#modal-free >.form_icon{
+    position: absolute;
+    left: 9.55%;
+    right: 81.82%;
+    top: 31.67%;
+    bottom: 56.37%;
+}
+
+#modal-free >.form_icon.form_icon_second{
+    position: absolute;
+    left: 8.03%;
+    right: 81.82%;
+    top: 50%;
+    bottom: 38.05%;
+}
+
+#modal-free >.form_text_icon{
+    position: absolute;
+    left: 24.09%;
+    right: 8.48%;
+    top: 31.67%;
+    bottom: 55.18%;
+
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 136%;
+    /* or 22px */
+
+    letter-spacing: 0.055em;
+
+    color: #3A4244;
+}
+
+#modal-free >.form_text_icon.form_text_icon_second{
+    position: absolute;
+    left: 24.09%;
+    right: 8.48%;
+    top: 50%;
+    bottom: 36.85%;
+
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 136%;
+    /* or 22px */
+
+    letter-spacing: 0.055em;
+
+    color: #3A4244;
+}
+
+#modal-free >.botton_green_first{
+    position: absolute;
+    left: 21.82%;
+    right: 22.12%;
+    top: 72.11%;
+    bottom: 14.14%;
+}
+
 /* Media */
 
 @media ( max-width: 800px) {

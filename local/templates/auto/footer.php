@@ -40,8 +40,8 @@ global $CITY, $USER;
     <p class="form_text_icon">Вы уже выбрали или выбираете нужный вам автомобиль, в автосалоне или на сайтах drom.ru /
         auto.ru и т.д.
     </p>
-    <img src="/local/asset/img/mod_2.png" class="form_icon">
-    <p class="form_text_icon">Наш специалист готов выехать и провести осмотр, показывая вам все дефекты и недочеты,
+    <img src="/local/asset/img/mod_2.png" class="form_icon form_icon_second">
+    <p class="form_text_icon form_text_icon_second">Наш специалист готов выехать и провести осмотр, показывая вам все дефекты и недочеты,
         чтобы обезопасить вас от выбора некачественного авто.</p>
 
     <div class="botton_green_first">

@@ -20,5 +20,5 @@ margin: -195px -6px 0px 0px;">
             </div>
         </div>
     </div>
-        <img src="/local/asset/img/svg/boy.svg" class="boy_pic mobile_boy_pic">
+        <img id="one_click" src="/local/asset/img/svg/boy.svg" class="boy_pic mobile_boy_pic">
 </form>

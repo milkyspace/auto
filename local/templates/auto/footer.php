@@ -35,18 +35,27 @@ global $CITY, $USER;
 </div>
 <!-- Modal free -->
 <div style="display: none;" id="modal-free">
-    <h2>Бесплатно подберем автомобиль по вашим параметрам в лучшем состоянии!</h2>
-    <img src="/local/asset/img/mod_1.png" class="form_icon">
-    <p class="form_text_icon">Вы уже выбрали или выбираете нужный вам автомобиль, в автосалоне или на сайтах drom.ru /
-        auto.ru и т.д.
-    </p>
-    <img src="/local/asset/img/mod_2.png" class="form_icon form_icon_second">
-    <p class="form_text_icon form_text_icon_second">Наш специалист готов выехать и провести осмотр, показывая вам все дефекты и недочеты,
-        чтобы обезопасить вас от выбора некачественного авто.</p>
-
+    <div class="modal-free-title">
+        <h2>Бесплатно подберем автомобиль по вашим параметрам в лучшем состоянии!</h2>
+    </div>
+    <div class="modal-free-list">
+        <img src="/local/asset/img/mod_1.png" class="form_icon">
+        <p class="form_text_icon">Вы уже выбрали или выбираете нужный вам автомобиль, в автосалоне или на сайтах drom.ru
+            /
+            auto.ru и т.д.
+        </p>
+    </div>
+    <div class="modal-free-list">
+        <img src="/local/asset/img/mod_2.png" class="form_icon form_icon_second">
+        <p class="form_text_icon form_text_icon_second">Наш специалист готов выехать и провести осмотр, показывая вам
+            все
+            дефекты и недочеты,
+            чтобы обезопасить вас от выбора некачественного авто.</p>
+    </div>
     <div class="botton_green_first">
-        <a href="#one_click" class="anchor-scroll button_first order">Заказать бесплатный подбор</a>
-
+        <div class="modal-free-button">
+            <a href="#one_click" class="anchor-scroll button_first order">Заказать бесплатный подбор</a>
+        </div>
     </div>
 </div>
 <div style="display: none;" id="modal-ok">

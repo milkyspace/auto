@@ -1018,12 +1018,20 @@ img.mobile_boy_pic{
     max-width: inherit !important;
 }
 
+#modal-free .modal-free-title{
+    width: 100%;
+    padding-top: 27px;
+}
+
+#modal-free .modal-free-list{
+    width: 100%;
+    padding-top: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #modal-free h2{
-    position: absolute;
-    left: 9.55%;
-    right: 8.48%;
-    top: 12.15%;
-    bottom: 74.7%;
     font-family: Graphik;
     font-weight: 500;
     font-size: 24px;
@@ -1031,66 +1039,48 @@ img.mobile_boy_pic{
     letter-spacing: 0.055em;
 }
 
-#modal-free >.form_icon{
-    position: absolute;
-    left: 9.55%;
-    right: 81.82%;
-    top: 31.67%;
-    bottom: 56.37%;
+#modal-free .form_icon{
 }
 
-#modal-free >.form_icon.form_icon_second{
-    position: absolute;
-    left: 8.03%;
-    right: 81.82%;
-    top: 50%;
-    bottom: 38.05%;
+#modal-free .form_icon.form_icon_second{
 }
 
-#modal-free >.form_text_icon{
-    position: absolute;
-    left: 24.09%;
-    right: 8.48%;
-    top: 31.67%;
-    bottom: 55.18%;
-
+#modal-free .form_text_icon{
     font-family: Graphik;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 136%;
-    /* or 22px */
+
+    padding-left: 20px;
 
     letter-spacing: 0.055em;
 
     color: #3A4244;
 }
 
-#modal-free >.form_text_icon.form_text_icon_second{
-    position: absolute;
-    left: 24.09%;
-    right: 8.48%;
-    top: 50%;
-    bottom: 36.85%;
-
+#modal-free .form_text_icon.form_text_icon_second{
     font-family: Graphik;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 136%;
-    /* or 22px */
+
+    padding-left: 20px;
 
     letter-spacing: 0.055em;
 
     color: #3A4244;
 }
 
-#modal-free >.botton_green_first{
-    position: absolute;
-    left: 21.82%;
-    right: 22.12%;
-    top: 72.11%;
-    bottom: 14.14%;
+#modal-free .botton_green_first{
+}
+
+#modal-free .modal-free-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 60px;
 }
 
 /* Media */
@@ -1374,8 +1364,6 @@ img.mobile_boy_pic{
     }
 
     .botton_green_first {
-        position: absolute;
-        margin-top: 126px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -2048,7 +2036,6 @@ img.mobile_boy_pic{
     }
 
     .form_text_icon {
-        margin: -50px 0 30px 70px !important;
         font-size: 10px !important;
         max-width: 396px !important;
     }

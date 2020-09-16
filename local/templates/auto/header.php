@@ -38,9 +38,58 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
                     <img src="/local/asset/img/svg/sd_icon.svg" alt="ICON" class="header_logo_pic">
                 </a>
             </div>
+            <div class="header_contact-mobile">
+                <a href="#CITY_PHONE_MOBILE_LINK#">#CITY_PHONE_MOBILE#</a>
+                <span>#CITY_ADDRESS_MOBILE#</span>
+            </div>
+
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <div class="icon menu__box">
+                    <nav class="icon_city">
+                        <img src="/local/asset/img/svg/city1.svg" class="icon_city1"><a href="#">Ваш город:</a>
+                        <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p></a>
+                    </nav>
+                    <nav class="icon_geo">
+                        <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
+                        <a href="#contacts" class="anchor-scroll">#CITY_ADDRESS#</a>
+                    </nav>
+                    <nav class="icon_call">
+                        <img src="/local/asset/img/svg/call.svg" class="icon_call1"><a href="tel:#CITY_PHONE#">#CITY_PHONE#</a>
+                    </nav>
+                    <nav class="icon_number">
+                        <!--					<a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
+                        <a href="#one_click" class="button anchor-scroll">Заказать звонок</a>
+                        <!--                    <a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
+                    </nav>
+                </div>
+            </div>
+
+            <div class="text_title-mobile">
+                <span class="title-n1">Автокредит</span>
+                <span class="title-n2">в #CITY_NAME_PRED#</span>
+                <span class="title-n3">это просто!</span>
+            </div>
+
+            <div class="text_desc-mobile">
+                <div>
+                    <img src="/local/asset/img/svg/circle.svg" alt="">
+                    <span>Одобрим за 15 минут!</span>
+                </div>
+                <div>
+                    <img src="/local/asset/img/svg/circle.svg" alt="">
+                    <span>На любое авто Б/у или Новое</span>
+                </div>
+                <div>
+                    <img src="/local/asset/img/svg/circle.svg" alt="">
+                    <span>9.9% минимальный годовой процент!</span>
+                </div>
+            </div>
+
             <div class="icon">
-
-
                 <nav class="icon_city">
                     <img src="/local/asset/img/svg/city1.svg" class="icon_city1"><a href="#">Ваш город:</a>
                     <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p></a>
@@ -57,7 +106,6 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
                     <a href="#one_click" class="button anchor-scroll">Заказать звонок</a>
 <!--                    <a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
                 </nav>
-
             </div>
 
 

@@ -19,7 +19,7 @@ jQuery(function() {
 
     jQuery(document).on('click', '[data-role="city-select"]', function(e) {
         e.preventDefault();
-
+        jQuery('#menu__toggle:checked').prop('checked', false);
         if (!is_content_built) {
             content_build();
 

@@ -18,6 +18,7 @@ margin: -195px -6px 0px 0px;">
                 <h4 class="search_form_text">*Я даю согласие на обработку персональных данных
                 </h4>
             </div>
-
         </div>
+    </div>
+        <img src="/local/asset/img/svg/boy.svg" class="boy_pic mobile_boy_pic">
 </form>

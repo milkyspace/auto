@@ -1364,6 +1364,8 @@ img.mobile_boy_pic{
     }
 
     .botton_green_first {
+        position: absolute;
+        margin-top: 126px;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -2016,6 +2018,11 @@ img.mobile_boy_pic{
 
     #modal-form.modal {
         width: 100% !important;
+    }
+
+    #modal-form .botton_green_first {
+        position: relative;
+        margin-top: 0;
     }
 
     #modal-form h2 {

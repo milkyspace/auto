@@ -2037,6 +2037,10 @@ img.mobile_boy_pic{
     #modal-form .search_form_submit {
         width: 100% !important;
     }
+    
+    .request.container >img{
+        display: none;
+    }
 
     .form_icon {
         margin: 0 !important;

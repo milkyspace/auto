@@ -30,7 +30,7 @@ global $CITY, $USER;
 </main>
 </div>
 </body>
-<div style="display: none;" id="modal-form">
+<div style="display: none; margin-left: 0; max-width: 660px; " id="modal-form">
     <? $APPLICATION->IncludeComponent("pwd:connect_form", "", []); ?>
 </div>
 <!-- Modal free -->

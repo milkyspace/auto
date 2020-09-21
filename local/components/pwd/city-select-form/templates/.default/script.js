@@ -113,16 +113,14 @@ jQuery(function() {
     });
 
     function content_build() {
-        let html = '';
+        let html = '<div>Выбор города</div><hr>';
 
         for (let groupName in window.citySelectTree) {
-            html += `<ul data-group="${groupName}">`;
+            html += `<ul>`;
 
             let group = window.citySelectTree[groupName];
 
             for (let subGroupName in group) {
-                html += `<li data-role="sub-group" data-sub-group="${subGroupName}"><b>${subGroupName}</b></li>`;
-
                 let subGroup = group[subGroupName];
 
                 for (let [name, url] of subGroup) {

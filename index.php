@@ -244,7 +244,7 @@
                 </p>
             </div>
         </div>
-        <section class="calculator second container">
+        <section class="calculator second container calc_desktop">
 
             <div class="calc_main">
                 <div class="calc_over_l calc_over_margin">
@@ -289,6 +289,102 @@
 
             </div>
 
+
+            <div class="calc_end">
+                <div class="calc_over_l calc_over_end">
+                    <span class="calc_over_l-1">
+                    Ваш ежемесячный платеж, руб:
+                        </span>
+                    <span class="calc_over_r color-green">
+								<span class="calc_result">30 380</span> <span class="calc_over_rub">руб</span>
+							</span>
+                </div>
+                <div class="calc_under_end">
+                    *Рассчет ежемесячного платежа выполнен по минимальной годовой ставке 9,9%
+                </div>
+            </div>
+        </section>
+        <section class="calculator second container calc_mobile">
+
+            <div class="calc_main">
+                <div class="calc_over_l calc_over_margin">
+                    Выберите сумму автокредита, руб.
+                    <span class="calc_over_r color-gray">
+								<span class="sum_credit">1 230 380</span> <span class="calc_over_rub">руб</span>
+							</span>
+                </div>
+                <div class="line_pic">
+                    <input type="text" id="js-range-slider-3" class="js-range-slider-3" value=""/>
+                    <!--						<img src="/local/asset/img/svg/line_gray1.svg" class="line_gray">-->
+                    <!--						<img src="/local/asset/img/svg/line_green.svg" class="line_green">-->
+                    <!--						<img src="/local/asset/img/svg/circle_line.svg" class="circle_line">-->
+                </div>
+                <div class="calc_under_l">
+                    0
+                    <span class="calc_under_r" style="padding-left: 27px;">
+								500 тыс
+                    </span>
+                    <span class="calc_under_r">
+								1 млн
+                    </span>
+                    <span class="calc_under_r">
+								1.5 млн
+                    </span>
+                    <span class="calc_under_r">
+								2 млн
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="" class="minus ones">-</a>
+            <a href="" class="plus ones">+</a>
+
+            <div class="calc_main pt-63">
+                <div class="calc_over_l calc_over_margin">
+                    Срок кредитования, лет.
+                    <span class="calc_over_r color-gray">
+							<span class="term_credit">8</span> <span class="calc_over_text">лет</span>
+							</span>
+                </div>
+                <div class="line_pic">
+                    <!--						<img src="/local/asset/img/svg/line_gray1.svg" class="line_gray">-->
+                    <!--						<img src="/local/asset/img/svg/line_green.svg" class="line_green">-->
+                    <!--						<img src="/local/asset/img/svg/circle_line.svg" class="circle_line">-->
+                    <input type="text" id="js-range-slider-4" class="js-range-slider-4" value=""/>
+                </div>
+                <div class="calc_under_l">
+                    0
+                    <span class="calc_under_r" style="position:absolute; left: 60px">
+								1
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 100px">
+								2
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 138px;">
+								3
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 176px">
+								4
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 215px">
+								5
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 253px">
+								6
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 291px">
+								7
+                    </span>
+                    <span class="calc_under_r" style="">
+								8
+                    </span>
+                </div>
+
+            </div>
+
+            <a href="" class="minus t-290">-</a>
+            <a href="" class="plus t-290">+</a>
 
             <div class="calc_end">
                 <div class="calc_over_l calc_over_end">

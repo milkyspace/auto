@@ -2101,6 +2101,17 @@ img.mobile_boy_pic {
 
     .form_icon {
         margin: 0 !important;
+        float: left;
+    }
+
+    #modal-form{
+        padding: 40px 30px !important;
+    }
+
+    #modal-form p{
+        font-size: 10px;
+        margin-left: 55px !important;
+        padding-top: 5px;
     }
 
     .form_text_icon {

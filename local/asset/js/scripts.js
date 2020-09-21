@@ -134,7 +134,7 @@ var calculator = (function () {
             if(parseInt($range3.prop("value")) > 0) {
                 var instance = $('#js-range-slider-3').data("ionRangeSlider");
                 instance.update({
-                    from: (parseInt($range3.prop("value")) - 500000)
+                    from: (parseInt($range3.prop("value")) - 50000)
                 });
             }
             jQuery('.sum_credit').html($range3.prop("value"));
@@ -148,7 +148,7 @@ var calculator = (function () {
             if(parseInt($range3.prop("value")) < 2000000) {
                 var instance = $('#js-range-slider-3').data("ionRangeSlider");
                 instance.update({
-                    from: (parseInt($range3.prop("value")) + 500000)
+                    from: (parseInt($range3.prop("value")) + 50000)
                 });
             }
             jQuery('.sum_credit').html($range3.prop("value"));

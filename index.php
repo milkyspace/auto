@@ -261,9 +261,18 @@
                 </div>
                 <div class="calc_under_l">
                     0
+                    <span class="calc_under_r" style="padding-left: 27px;">
+								500 тыс
+                    </span>
+                    <span class="calc_under_r">
+								1 млн
+                    </span>
+                    <span class="calc_under_r">
+								1.5 млн
+                    </span>
                     <span class="calc_under_r">
 								2 млн
-							</span>
+                    </span>
                 </div>
 
             </div>
@@ -282,9 +291,27 @@
                 </div>
                 <div class="calc_under_l">
                     0
-                    <span class="calc_under_r">
-								15
-							</span>
+                    <span class="calc_under_r" style="position:absolute; left: 195px">
+								1
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 309px">
+								2
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 424px;">
+								3
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 536px">
+								4
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 653px">
+								5
+                    </span>
+                    <span class="calc_under_r" style="position:absolute; left: 768px">
+								6
+                    </span>
+                    <span class="calc_under_r" style="">
+								7
+                    </span>
                 </div>
 
             </div>
@@ -344,7 +371,7 @@
                 <div class="calc_over_l calc_over_margin">
                     Срок кредитования, лет.
                     <span class="calc_over_r color-gray">
-							<span class="term_credit">8</span> <span class="calc_over_text">лет</span>
+							<span class="term_credit">7</span> <span class="calc_over_text">лет</span>
 							</span>
                 </div>
                 <div class="line_pic">
@@ -355,29 +382,26 @@
                 </div>
                 <div class="calc_under_l">
                     0
-                    <span class="calc_under_r" style="position:absolute; left: 60px">
+                    <span class="calc_under_r" style="position:absolute; left: 65px">
 								1
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 100px">
+                    <span class="calc_under_r" style="position:absolute; left: 110px">
 								2
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 138px;">
+                    <span class="calc_under_r" style="position:absolute; left: 154px;">
 								3
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 176px">
+                    <span class="calc_under_r" style="position:absolute; left: 198px">
 								4
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 215px">
+                    <span class="calc_under_r" style="position:absolute; left: 244px">
 								5
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 253px">
+                    <span class="calc_under_r" style="position:absolute; left: 289px">
 								6
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 291px">
-								7
-                    </span>
                     <span class="calc_under_r" style="">
-								8
+								7
                     </span>
                 </div>
 
@@ -518,7 +542,7 @@
                         <div class="contacts__address_pic">
                             <img src="/local/asset/img/svg/geo_icon.svg" alt="" class="contacts__img">
                             <h4 class="contacts__title">Адрес</h4>
-                            <p class="contacts_text">#CITY_NAME#, #CITY_ADDRESS#
+                            <p class="contacts_text">#CITY_NAME# #CITY_ADDRESS#
                             </p>
 
                         </div>

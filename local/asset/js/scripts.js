@@ -45,7 +45,7 @@ var calculator = (function () {
             skin: "round",
             type: "single",
             min: 0,
-            max: 8,
+            max: 7,
             from: 3,
             hide_min_max: true,
             onFinish: function (data) {
@@ -75,7 +75,7 @@ var calculator = (function () {
             type: "single",
             grid: false,
             min: 0,
-            max: 8,
+            max: 7,
             from: 3,
             hide_min_max: true,
             onFinish: function (data) {
@@ -117,7 +117,7 @@ var calculator = (function () {
 
         jQuery('.plus.t-290').click(function (e) {
             e.preventDefault();
-            if(parseInt($range4.prop("value")) < 8) {
+            if(parseInt($range4.prop("value")) < 7) {
                 var instance = $('#js-range-slider-4').data("ionRangeSlider");
                 instance.update({
                     from: (parseInt($range4.prop("value")) + 1)

@@ -6,6 +6,15 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NTNM485');</script>
+    <!-- End Google Tag Manager -->
+
     <?php $APPLICATION->ShowHead(); ?>
     <meta charset="UTF-8">
     <meta name="mailru-domain" content="CKNKtjAKBGkSXtkc" />
@@ -17,6 +26,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
     <?php Asset::getInstance()->addCss("/local/asset/node_modules/jquery-modal/jquery.modal.css"); ?>
     <?php Asset::getInstance()->addCss("/local/asset/node_modules/ion-rangeslider/css/ion.rangeSlider.css"); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <?php CJSCore::Init(array("jquery")); ?>
     <?php Asset::getInstance()->addJs("/local/asset/js/jquery.anchorScroll.min.js"); ?>
     <?php Asset::getInstance()->addJs("/local/asset/node_modules/jquery-modal/jquery.modal.js"); ?>
@@ -29,6 +39,12 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 </head>
 
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTNM485"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
 <div class="site-container">
     <header class="header">

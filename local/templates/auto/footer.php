@@ -12,7 +12,7 @@ global $CITY, $USER;
     <div class="container">
         <img src="/local/asset/img/svg/logo_end.svg" class="logo_end">
         <h4 class="footer_ooo">ОГРН 1195476042651 ИНН 5405042720
-            © ООО «СД-АВТО» 2020 г. </h4>
+            © ООО «АВТОМОЛЛ» 2020 г. </h4>
         <p class="footer_text">Обращаем ваше внимание на то, что данный интернет-сайт носит исключительно информационный
             характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437
             Гражданского кодекса Российской Федерации. Все персональные данные не подлежат передачи третьим лицам и
@@ -29,6 +29,20 @@ global $CITY, $USER;
 </section>
 </main>
 </div>
+
+<!-- Begin LeadBack code {literal} -->
+<script>
+    var _emv = _emv || [];
+    _emv['campaign'] = '5a562b1ecd3433ef2a342b42';
+
+    (function() {
+        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+        em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+    })();
+</script>
+<!-- End LeadBack code {/literal} -->
+
 </body>
 <div style="display: none; margin-left: 0; max-width: 660px; " id="modal-form">
     <? $APPLICATION->IncludeComponent("pwd:connect_form", "", []); ?>

@@ -236,7 +236,7 @@ h2.first_subtitle {
 .button_calc {
     position: absolute;
     /*margin: 305px 303px 0px 0;*/
-    
+
     /*for Safari*/
     top: 430px;
     right: 450px;
@@ -2443,6 +2443,7 @@ img.mobile_boy_pic {
 
     .button_calc {
         margin: 347px 269px 0px 0;
+        right: 0;
     }
 
     .question {

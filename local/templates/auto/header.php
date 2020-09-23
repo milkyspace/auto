@@ -1,6 +1,6 @@
 <? use Bitrix\Main\Page\Asset;
 
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <?php global $CITY, $USER; ?>
 <!DOCTYPE html>
@@ -8,16 +8,24 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 <head>
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NTNM485');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NTNM485');</script>
     <!-- End Google Tag Manager -->
 
     <?php $APPLICATION->ShowHead(); ?>
     <meta charset="UTF-8">
-    <meta name="mailru-domain" content="CKNKtjAKBGkSXtkc" />
+    <meta name="mailru-domain" content="CKNKtjAKBGkSXtkc"/>
     <link rel="stylesheet prefetch"
           href="https://cdn.rawgit.com/mfd/e7842774e037edf15919037594a79b2b/raw/665bdfc532094318449f1010323c84013d5af953/graphik.css">
     <title><?php $APPLICATION->ShowTitle(false); ?></title>
@@ -41,8 +49,10 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
 <body>
 
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTNM485"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTNM485"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
@@ -61,17 +71,21 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
             </div>
 
             <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
+                <input id="menu__toggle" type="checkbox"/>
                 <label class="menu__btn" for="menu__toggle">
                     <span></span>
                 </label>
                 <div class="icon menu__box">
                     <nav class="icon_city">
                         <img src="/local/asset/img/svg/city1.svg" class="icon_city1"><a href="#">Ваш город:</a>
-                        <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p></a>
+                        <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p>
+                        </a>
                     </nav>
                     <nav class="icon_geo">
-                        <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
+                        <?php if ($CITY->GetFields()['CODE'] === 'novosibirsk') { ?>
+                            <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
+                            <?php
+                        } ?>
                         <a href="#contacts" class="anchor-scroll">#CITY_ADDRESS#</a>
                     </nav>
                     <nav class="icon_call">
@@ -112,16 +126,20 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();?>
                     <a href="#modal-city" rel="modal:open" data-role="city-select"><p class="nsk">#CITY_NAME# </p></a>
                 </nav>
                 <nav class="icon_geo">
-                    <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
+                    <?php if ($CITY->GetFields()['CODE'] === 'novosibirsk') { ?>
+                        <img src="/local/asset/img/svg/geo1.svg" class="icon_geo1">
+                        <?php
+                    } ?>
                     <a href="#contacts" class="anchor-scroll">#CITY_ADDRESS#</a>
                 </nav>
                 <nav class="icon_call">
-                    <img src="/local/asset/img/svg/call.svg" class="icon_call1"><a href="tel:#CITY_PHONE#">#CITY_PHONE#</a>
+                    <img src="/local/asset/img/svg/call.svg" class="icon_call1"><a
+                            href="tel:#CITY_PHONE#">#CITY_PHONE#</a>
                 </nav>
                 <nav class="icon_number">
                     <!--					<a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
                     <a href="#one_click" class="button anchor-scroll">Заказать звонок</a>
-<!--                    <a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
+                    <!--                    <a href="#modal-form" rel="modal:open" class="button">Заказать звонок</a>-->
                 </nav>
             </div>
 

@@ -1607,6 +1607,10 @@ img.mobile_boy_pic {
         align-items: center;
     }
 
+    .button_calc {
+        right: 0;
+    }
+
     .mobile {
         display: flex;
         margin: 399px 14px 0px 0;

@@ -382,22 +382,22 @@
                 </div>
                 <div class="calc_under_l">
                     0
-                    <span class="calc_under_r" style="position:absolute; left: 65px">
+                    <span class="calc_under_r" style="position:absolute; left: 50px">
 								1
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 110px">
+                    <span class="calc_under_r" style="position:absolute; left: 95px">
 								2
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 154px;">
+                    <span class="calc_under_r" style="position:absolute; left: 140px;">
 								3
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 198px">
+                    <span class="calc_under_r" style="position:absolute; left: 183px">
 								4
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 244px">
+                    <span class="calc_under_r" style="position:absolute; left: 229px">
 								5
                     </span>
-                    <span class="calc_under_r" style="position:absolute; left: 289px">
+                    <span class="calc_under_r" style="position:absolute; left: 273px">
 								6
                     </span>
                     <span class="calc_under_r" style="">

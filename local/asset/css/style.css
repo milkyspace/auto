@@ -1608,8 +1608,18 @@ img.mobile_boy_pic {
     }
 
     .button_calc {
+        position: relative;
         right: 0;
         top: auto !important;
+
+        right: auto !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 140px 0 0 0 !important;
+    }
+
+    .calc_main.pt-63 .calc_under_l{
+        position: relative;
     }
 
     .mobile {
@@ -2298,9 +2308,32 @@ img.mobile_boy_pic {
         right: 19px;
     }
 
-    .minus {
-        top: 118px;
-        right: 75px;
+    .minus.ones {
+        margin-top: -98px;
+        margin-left: 230px;
+        top: auto !important;
+        right: auto !important;
+    }
+
+    .plus.ones {
+        margin-top: -98px;
+        margin-left: 285px;
+        top: auto !important;
+        right: auto !important;
+    }
+
+    .minus.t-290 {
+        margin-top: -98px;
+        margin-left: 230px;
+        top: auto !important;
+        right: auto !important;
+    }
+
+    .plus.t-290 {
+        margin-top: -98px;
+        margin-left: 285px;
+        top: auto !important;
+        right: auto !important;
     }
 
     .t-290 {

@@ -1609,6 +1609,7 @@ img.mobile_boy_pic {
 
     .button_calc {
         right: 0;
+        top: auto !important;
     }
 
     .mobile {

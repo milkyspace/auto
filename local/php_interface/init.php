@@ -182,15 +182,15 @@ if ($_SERVER['HTTP_X_REQUESTED_WITH'] !== 'XMLHttpRequest') {
         $code = $_GET['uri_city_code'];
         $quoteCode = \preg_quote($code, '#');
         $content = \preg_replace("#(href|rel|link|action)=(['\"])/(?!(bitrix|local|favicon|css|js|img|node_modules|{$quoteCode}))#", "\$1=\$2/{$code}/$3", $content);
-        $content = \preg_replace('#href="https://([^\.]+)\.znaki154\.ru"#', "href=\"https://znaki154.ru/\$1/\"", $content);
-        $content = \preg_replace("#href=\"https://znaki154\\.ru/((?!{$quoteCode}/).*?)\"#", "href=\"https://znaki154.ru/{$code}/\$1\"", $content);
+        $content = \preg_replace('#href="https://([^\.]+)\.sd-car\.ru"#', "href=\"https://sd-car.ru/\$1/\"", $content);
+        $content = \preg_replace("#href=\"https://sd-car\\.ru/((?!{$quoteCode}/).*?)\"#", "href=\"https://sd-car.ru/{$code}/\$1\"", $content);
         $content = \preg_replace("#(\?|&|&amp;)uri_city_code={$quoteCode}&(amp;)?#", "\$1", $content);
         $content = \preg_replace("#(\?|&|&amp;)uri_city_code={$quoteCode}(['\"])#", "\$2", $content);
     }
 
     if (SUB_DOMAIN) {
         $code = SUB_DOMAIN;
-        $content = \preg_replace("#href=\"https://znaki154\\.ru/#", "href=\"https://{$code}.znaki154.ru/", $content);
+        $content = \preg_replace("#href=\"https://sd-car\\.ru/#", "href=\"https://{$code}.sd-car.ru/", $content);
     }
 
     $fields = $CITY ? $CITY->GetFields() : [];

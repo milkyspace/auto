@@ -47,7 +47,7 @@ while ($row = $result->GetNext(false, false)) {
     $code = $row['CODE'];
     $hostname = WEB_HOSTNAME;
     $uri = \explode('?', $arParams['REQUEST_URI'])[0];
-    $url = "/?uri_city_code={$code}";
+    $url = "/{$code}";
 
     if (!empty($_GET['uri_city_code'])) {
         $cityCode = $_GET['uri_city_code'];

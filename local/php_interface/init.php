@@ -24,18 +24,7 @@ if ($CITY_DETECTION == 'unknown') {
     $CITY_DETECTION = null;
 }
 
-$uriParts = \explode('?', $_SERVER['REQUEST_URI']);
-$uri = $uriParts[0];
-$cityNameFromUri = \str_replace("/", '', $uri);
 
-$cityFromUri = \CIBlockElement::GetList([], [
-    'IBLOCK_ID' => CityTable::getIblockId(),
-    'CODE' => $cityNameFromUri ?? $_GET['uri_city_code'] ?? $CITY_DETECTION ?? 'novosibirsk',
-], false, false, []);
-
-$CITY_DETECTION = $cityFromUri->Fetch()['CODE'];
-
-echo '<pre>'.print_r($cityFromUri->Fetch(),true).'</pre>';
 
 
 $cityObject = \CIBlockElement::GetList([], [

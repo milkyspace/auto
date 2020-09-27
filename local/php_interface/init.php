@@ -23,6 +23,19 @@ $CITY_DETECTION = $_COOKIE['city_detection'] ?: null;
 if ($CITY_DETECTION == 'unknown') {
     $CITY_DETECTION = null;
 }
+
+$uriParts = \explode('?', $_SERVER['REQUEST_URI']);
+$uri = $uriParts[0];
+$cityNameFromUri = \str_replace("/", '', $uri);
+
+$cityFromUri = \CIBlockElement::GetList([], [
+    'IBLOCK_ID' => CityTable::getIblockId(),
+    'CODE' => $CITY_DETECTION ?? $_GET['uri_city_code'] ?? 'novosibirsk',
+], false, false, []);
+
+$CITY_DETECTION = $cityNameFromUri;
+
+
 $cityObject = \CIBlockElement::GetList([], [
     'IBLOCK_ID' => CityTable::getIblockId(),
     'CODE' => $CITY_DETECTION ?? $_GET['uri_city_code'] ?? 'novosibirsk',
@@ -47,7 +60,6 @@ if ($cityObject->SelectedRowsCount() === 0) {
 }
 
 $CITY = $cityObject->GetNextElement(false, false);
-
 if ($CITY->fields['CODE'] === 'novosibirsk') {
     if (!empty($_GET['uri_city_code'])) {
         $url = \str_replace('/novosibirsk/', '/', $_SERVER['REQUEST_URI']);
@@ -56,6 +68,7 @@ if ($CITY->fields['CODE'] === 'novosibirsk') {
     $url = WEB_PROTOCOL . '://' . WEB_HOSTNAME;
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);
     $uri = $uriParts[0];
+
     $query = !empty($uriParts[1]) ? "?{$uriParts[1]}" : '';
 
     if (!empty($_GET['uri_city_code'])) {

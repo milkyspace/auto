@@ -35,6 +35,8 @@ $cityFromUri = \CIBlockElement::GetList([], [
 
 $CITY_DETECTION = $cityFromUri->Fetch()['CODE'];
 
+echo '<pre>'.print_r($cityFromUri->Fetch(),true).'</pre>';
+
 
 $cityObject = \CIBlockElement::GetList([], [
     'IBLOCK_ID' => CityTable::getIblockId(),

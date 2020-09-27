@@ -30,10 +30,10 @@ $cityNameFromUri = \str_replace("/", '', $uri);
 
 $cityFromUri = \CIBlockElement::GetList([], [
     'IBLOCK_ID' => CityTable::getIblockId(),
-    'CODE' => $CITY_DETECTION ?? $_GET['uri_city_code'] ?? 'novosibirsk',
+    'CODE' => $cityNameFromUri ?? $_GET['uri_city_code'] ?? $CITY_DETECTION ?? 'novosibirsk',
 ], false, false, []);
 
-$CITY_DETECTION = $cityNameFromUri;
+$CITY_DETECTION = $cityFromUri->Fetch()['CODE'];
 
 
 $cityObject = \CIBlockElement::GetList([], [

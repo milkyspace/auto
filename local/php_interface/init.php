@@ -48,10 +48,15 @@ if (PHP_SAPI !== 'cli') {
     $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip . '?lang=ru'));
     if ($query && $query['status'] == 'success') {
         $cityFromIP = $query['city'];
-        $cityCheck = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'NAME' => \ucfirst($cityFromIP)], false, false, []);
-        if (strlen($cityCheck->Fetch()['CODE'])) {
-            \setcookie('city_detection', $cityCheck->Fetch()['CODE'], \strtotime('today +1 year'));
-            $city = $cityCheck->Fetch()['CODE'];
+        $cityCheckObj = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'NAME' => \ucfirst($cityFromIP)], false, false, []);
+
+        while ($row = $cityCheckObj->fetch()) {
+            $cityCheck = $row;
+        }
+
+        if (strlen($cityCheck['CODE'])) {
+            \setcookie('city_detection', $cityCheck['CODE'], \strtotime('today +1 year'));
+            $city = $cityCheck['CODE'];
         } else {
             $city = 'novosibirsk';
         }

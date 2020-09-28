@@ -283,7 +283,9 @@ SQL;
         '#CITY_PHONE_LINK#',
         '#CITY_PHONE_NBSP#',
         '#CITY_DELIVERY_TIME#',
-        '#CITY_DELIVERY_COST#'
+        '#CITY_DELIVERY_COST#',
+        '#CITY_WORKTIME#',
+        '#CITY_EMAIL#'
     ], [
         '',
         '',
@@ -299,9 +301,12 @@ SQL;
         'tel:' . \preg_replace('#\D+#', '', $phone),
         \preg_replace('#\s+#', '&nbsp;', $phone),
         $props['TIME']['VALUE'] ?: '(по уточнению)',
-        $props['COST']['VALUE'] ?: '(по уточнению)'
+        $props['COST']['VALUE'] ?: '(по уточнению)',
+        $props['WORKTIME']['VALUE']['TEXT'] ?: '(по уточнению)',
+        $props['EMAIL']['VALUE'] ?: '(по уточнению)',
     ], $content);
 });
+
 
 \AddEventHandler('original_simpleshop', 'OnProductPrice', [\core\EventHandler::class, 'OnProductPrice']);
 \AddEventHandler('original_simpleshop', 'OnRenderSaleProductDetails', [\core\EventHandler::class, 'OnRenderSaleProductDetails']);

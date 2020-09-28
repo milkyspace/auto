@@ -67,7 +67,12 @@ if (PHP_SAPI !== 'cli') {
     $cityNameFromUri = \str_replace("/", '', $uri);
 
     if (strlen($cityNameFromUri)) {
-        $cityCheck = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'CODE' => $cityNameFromUri], false, false, []);
+        $cityCheckObj = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'CODE' => $cityNameFromUri], false, false, []);
+
+        while ($row = $cityCheckObj->fetch()) {
+            $cityCheck = $row;
+        }
+
         if (strlen($cityCheck->Fetch()['CODE'])) {
             \setcookie('city_detection', $cityNameFromUri, \strtotime('today +1 year'));
             $city = $cityCheck->Fetch()['CODE'];

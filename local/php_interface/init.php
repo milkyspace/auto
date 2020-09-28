@@ -44,25 +44,6 @@ if (PHP_SAPI !== 'cli') {
 
     $city = $_COOKIE['city_detection'] ?: null;
 
-    $ip = $_SERVER['REMOTE_ADDR'];
-    $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip . '?lang=ru'));
-    if ($query && $query['status'] == 'success') {
-        $cityFromIP = $query['city'];
-        $cityCheckObj = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'NAME' => \ucfirst($cityFromIP)], false, false, []);
-
-        while ($row = $cityCheckObj->fetch()) {
-            $cityCheck = $row;
-        }
-
-        if (strlen($cityCheck['CODE'])) {
-            \setcookie('city_detection', $cityCheck['CODE'], \strtotime('today +1 year'));
-            $city = $cityCheck['CODE'];
-        } else {
-            $city = 'novosibirsk';
-        }
-        define("CITY_IP", $cityCheck['NAME']);
-    }
-
     if ($_GET['city-select'] == 'true') {
         $select = $_GET['city-select'];
         \setcookie('city_select', $select, \strtotime('today +1 year'));
@@ -71,6 +52,25 @@ if (PHP_SAPI !== 'cli') {
 
     if ($_COOKIE['city_select'] == 'true') {
         define("CITY_SELECT", "true");
+    } else {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip . '?lang=ru'));
+        if ($query && $query['status'] == 'success') {
+            $cityFromIP = $query['city'];
+            $cityCheckObj = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'NAME' => \ucfirst($cityFromIP)], false, false, []);
+
+            while ($row = $cityCheckObj->fetch()) {
+                $cityCheck = $row;
+            }
+
+            if (strlen($cityCheck['CODE'])) {
+                \setcookie('city_detection', $cityCheck['CODE'], \strtotime('today +1 year'));
+                $city = $cityCheck['CODE'];
+            } else {
+                $city = 'novosibirsk';
+            }
+            define("CITY_IP", $cityCheck['NAME']);
+        }
     }
 
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);

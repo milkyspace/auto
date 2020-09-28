@@ -60,6 +60,17 @@ if (PHP_SAPI !== 'cli') {
         } else {
             $city = 'novosibirsk';
         }
+        define("CITY_IP", $cityCheck['NAME']);
+    }
+
+    if ($_GET['city-select'] == 'true') {
+        $select = $_GET['city-select'];
+        \setcookie('city_select', $select, \strtotime('today +1 year'));
+        define("CITY_SELECT", "true");
+    }
+
+    if ($_COOKIE['city_select'] == 'true') {
+        define("CITY_SELECT", "true");
     }
 
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);

@@ -2225,6 +2225,11 @@ img.mobile_boy_pic {
         margin: 0;
     }
 
+    .icon.menu__box nav {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     img#one_click {
         display: none;
     }

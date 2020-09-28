@@ -1281,7 +1281,7 @@ img.mobile_boy_pic {
     }
 
     .header_contact-mobile {
-        display: flex;
+        display: none;
     }
 
     .header_contact-mobile a {

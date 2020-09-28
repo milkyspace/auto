@@ -73,9 +73,9 @@ if (PHP_SAPI !== 'cli') {
             $cityCheck = $row;
         }
 
-        if (strlen($cityCheck->Fetch()['CODE'])) {
+        if (strlen($cityCheck['CODE'])) {
             \setcookie('city_detection', $cityNameFromUri, \strtotime('today +1 year'));
-            $city = $cityCheck->Fetch()['CODE'];
+            $city = $cityCheck['CODE'];
         } else {
             $city = 'novosibirsk';
         }

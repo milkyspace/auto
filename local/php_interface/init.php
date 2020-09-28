@@ -48,6 +48,8 @@ if (PHP_SAPI !== 'cli') {
         $select = $_GET['city-select'];
         \setcookie('city_select', $select, \strtotime('today +1 year'));
         define("CITY_SELECT", "true");
+        $urlUpdate = $_SERVER['REQUEST_URI'];
+        LocalRedirect($urlUpdate);
     }
 
     if ($_COOKIE['city_select'] == 'true') {
@@ -306,7 +308,6 @@ SQL;
         $props['EMAIL']['VALUE'] ?: '(по уточнению)',
     ], $content);
 });
-
 
 \AddEventHandler('original_simpleshop', 'OnProductPrice', [\core\EventHandler::class, 'OnProductPrice']);
 \AddEventHandler('original_simpleshop', 'OnRenderSaleProductDetails', [\core\EventHandler::class, 'OnRenderSaleProductDetails']);

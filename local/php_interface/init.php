@@ -123,7 +123,6 @@ if (PHP_SAPI !== 'cli') {
     if ($CITY->fields['CODE'] === 'novosibirsk') {
         if (!empty($_GET['uri_city_code'])) {
             $url = \str_replace('/novosibirsk/', '/', $_SERVER['REQUEST_URI']);
-
             LocalRedirect($url);
         }
     } elseif ($CITY->fields['ACTIVE'] === 'N') {
@@ -305,6 +304,9 @@ SQL;
         $props['WORKTIME']['VALUE']['TEXT'] ?: '(по уточнению)',
         $props['EMAIL']['VALUE'] ?: '(по уточнению)',
     ], $content);
+    if (!empty($_GET['city-select'])) {
+        LocalRedirect('/');
+    }
 });
 
 \AddEventHandler('original_simpleshop', 'OnProductPrice', [\core\EventHandler::class, 'OnProductPrice']);

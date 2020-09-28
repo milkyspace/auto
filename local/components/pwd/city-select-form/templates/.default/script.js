@@ -126,7 +126,7 @@ jQuery(function() {
                 for (let [name, url] of subGroup) {
                     let active = window.citySelectUrl === url;
 
-                    html += `<li data-role="city" data-name="${name}" data-sub-group="${subGroupName}" class="${active ? 'active' : ''}"><a href="${url}">${name}</a></li>`;
+                    html += `<li data-role="city" data-name="${name}" data-sub-group="${subGroupName}" class="${active ? 'active' : ''}"><a href="${url}?city-select=true">${name}</a></li>`;
                 }
             }
 

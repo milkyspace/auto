@@ -35,10 +35,13 @@ global $CITY, $USER;
     var _emv = _emv || [];
     _emv['campaign'] = '5a562b1ecd3433ef2a342b42';
 
-    (function() {
-        var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+    (function () {
+        var em = document.createElement('script');
+        em.type = 'text/javascript';
+        em.async = true;
         em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(em, s);
     })();
 </script>
 <!-- End LeadBack code {/literal} -->
@@ -78,6 +81,18 @@ global $CITY, $USER;
     <p style="text-align: center;
     font-size: 16px; padding: 15px;">Заявка отправлена</p>
 </div>
+<?php if (CITY_SELECT != 'true') { ?>
+    <div class="modal-select-city-container">
+        <div id="modal-select-city">
+            <p>Ваш город <?= $CITY->fields['NAME'] ?>?</p>
+            <div>
+                <a href="/?city-select=true" class="yes">Да</a>
+                <a href="#modal-city" rel="modal:open" data-role="city-select" class="select-other">Выбрать другой</a>
+            </div>
+        </div>
+    </div>
+    <?php
+} ?>
 
 
 <?php

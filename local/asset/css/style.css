@@ -1926,6 +1926,9 @@ img.mobile_boy_pic {
         margin-bottom: 27px;
     }
 
+    .modal-select-city-container{
+        width: 85%;
+    }
 
     .third_cards {
         margin-bottom: 0px;

@@ -280,7 +280,7 @@
                 <div class="calc_over_l calc_over_margin">
                     Срок кредитования, лет.
                     <span class="calc_over_r color-gray">
-							<span class="term_credit">8</span> <span class="calc_over_text">лет</span>
+							<span class="term_credit">3</span> <span class="calc_over_text">года</span>
 							</span>
                 </div>
                 <div class="line_pic">

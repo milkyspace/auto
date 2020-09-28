@@ -93,6 +93,19 @@ var calculator = (function () {
 
             p = s * (r * (1 + r) ** n) / ((1 + r) ** n - 1)
             jQuery('.calc_result').html(p.toFixed());
+
+            if(b == 1){
+                jQuery('.calc_over_text').html('год')
+            }
+
+            if(b == 2 || b == 3 || b == 4){
+                jQuery('.calc_over_text').html('года')
+            }
+
+            if(b == 0 || b == 5 || b == 6 || b == 7){
+                jQuery('.calc_over_text').html('лет')
+            }
+
             if((a == 0 && b != 0) || (a == 0 && b == 0)) {
                 jQuery('.calc_result').html(0);
             }

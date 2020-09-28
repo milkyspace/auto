@@ -48,8 +48,7 @@ if (PHP_SAPI !== 'cli') {
         $select = $_GET['city-select'];
         \setcookie('city_select', $select, \strtotime('today +1 year'));
         define("CITY_SELECT", "true");
-        $urlUpdate = $_SERVER['REQUEST_URI'];
-        LocalRedirect($urlUpdate);
+        LocalRedirect('/');
     }
 
     if ($_COOKIE['city_select'] == 'true') {

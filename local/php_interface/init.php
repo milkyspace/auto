@@ -311,11 +311,6 @@ SQL;
 \AddEventHandler('original_simpleshop', 'OnRenderSaleProductDetails', [\core\EventHandler::class, 'OnRenderSaleProductDetails']);
 \AddEventHandler('original_simpleshop', 'OnSaleCreate', [\core\EventHandler::class, 'OnSaleCreate']);
 
-
-if($city == 'novosibirsk' || $_GET['city-select'] == 'true'){
-    LocalRedirect('/');
-}
-
 /**
  * @param string $property
  *

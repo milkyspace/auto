@@ -86,7 +86,7 @@ global $CITY, $USER;
         <div id="modal-select-city">
             <p>Ваш город <?= $CITY->fields['NAME'] ?>?</p>
             <div>
-                <a href="/?city-select=true" class="yes">Да</a>
+                <a href="/<?= $CITY->fields['CODE'] ?>?city-select=true" class="yes">Да</a>
                 <a href="#modal-city" rel="modal:open" data-role="city-select" class="select-other">Выбрать другой</a>
             </div>
         </div>

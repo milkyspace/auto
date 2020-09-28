@@ -312,7 +312,7 @@ SQL;
 \AddEventHandler('original_simpleshop', 'OnSaleCreate', [\core\EventHandler::class, 'OnSaleCreate']);
 
 
-if($city == 'novosibirsk' && !empty($_GET['city-select'])){
+if($city == 'novosibirsk' || $_GET['city-select'] == 'true'){
     LocalRedirect('/');
 }
 

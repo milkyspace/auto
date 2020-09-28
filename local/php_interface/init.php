@@ -73,10 +73,6 @@ if (PHP_SAPI !== 'cli') {
         }
     }
 
-    if($city == 'novosibirsk' && !empty($_GET['city-select'])){
-        LocalRedirect('/');
-    }
-
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);
     $uri = $uriParts[0];
     $cityNameFromUri = \str_replace("/", '', $uri);
@@ -314,6 +310,11 @@ SQL;
 \AddEventHandler('original_simpleshop', 'OnProductPrice', [\core\EventHandler::class, 'OnProductPrice']);
 \AddEventHandler('original_simpleshop', 'OnRenderSaleProductDetails', [\core\EventHandler::class, 'OnRenderSaleProductDetails']);
 \AddEventHandler('original_simpleshop', 'OnSaleCreate', [\core\EventHandler::class, 'OnSaleCreate']);
+
+
+if($city == 'novosibirsk' && !empty($_GET['city-select'])){
+    LocalRedirect('/');
+}
 
 /**
  * @param string $property

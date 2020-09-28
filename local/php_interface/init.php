@@ -42,37 +42,38 @@ if (PHP_SAPI !== 'cli') {
     $IS_BOT = $IS_BOT || (\preg_match('#(bingbot|googlebot|dotbot|mail\.ru_bot|yadirectfetcher|applebot)#', $userAgent) > 0);
     $IS_BOT = $IS_BOT || (\preg_match('#yandex(bot|images|turbo|accessibilitybot|mobilebot|market)#', $userAgent) > 0);
 
-    $CITY_DETECTION = $_COOKIE['city_detection'] ?: null;
+    $city = $_COOKIE['city_detection'] ?: null;
+
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $query = @unserialize(file_get_contents('http://ip-api.com/php/' . $ip . '?lang=ru'));
+    if ($query && $query['status'] == 'success') {
+        $cityFromIP = $query['city'];
+        $cityCheck = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'NAME' => \ucfirst($cityFromIP)], false, false, []);
+        if (strlen($cityCheck->Fetch()['CODE'])) {
+            \setcookie('city_detection', $cityCheck->Fetch()['CODE'], \strtotime('today +1 year'));
+            $city = $cityCheck->Fetch()['CODE'];
+        } else {
+            $city = 'novosibirsk';
+        }
+    }
 
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);
     $uri = $uriParts[0];
     $cityNameFromUri = \str_replace("/", '', $uri);
 
-    if (strlen($_GET['uri_city_code'])) {
-        $cityCheck = \CIBlockElement::GetList([], [
-            'IBLOCK_ID' => CityTable::getIblockId(),
-            'CODE' => $_GET['uri_city_code'],
-        ], false, false, []);
-        if (strlen($cityCheck->Fetch()['CODE'])) \setcookie('city_detection', $_GET['uri_city_code'], \strtotime('today +1 year'));
-    }
-
-    if (strlen($cityNameFromUri) <= 0) {
-        $cityNameFromUri = $CITY_DETECTION ?? 'novosibirsk';
-    } else {
-        $cityCheck = \CIBlockElement::GetList([], [
-            'IBLOCK_ID' => CityTable::getIblockId(),
-            'CODE' => $cityNameFromUri,
-        ], false, false, []);
+    if (strlen($cityNameFromUri)) {
+        $cityCheck = \CIBlockElement::GetList([], ['IBLOCK_ID' => CityTable::getIblockId(), 'CODE' => $cityNameFromUri], false, false, []);
         if (strlen($cityCheck->Fetch()['CODE'])) {
             \setcookie('city_detection', $cityNameFromUri, \strtotime('today +1 year'));
+            $city = $cityCheck->Fetch()['CODE'];
         } else {
-            $cityNameFromUri = 'novosibirsk';
+            $city = 'novosibirsk';
         }
     }
 
     $cityObject = \CIBlockElement::GetList([], [
         'IBLOCK_ID' => CityTable::getIblockId(),
-        'CODE' => $cityNameFromUri,
+        'CODE' => $city,
     ], false, false, []);
 
     if ($cityObject->SelectedRowsCount() === 0) {

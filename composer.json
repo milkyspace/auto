@@ -1,7 +1,7 @@
 {
     "require": {
         "spaceonfire/bitrix-tools": "^0.7.2",
-        "andreyryabin/sprint.migration": "^3.15"
+        "andreyryabin/sprint.migration": "^3.15",
     },
     "extra": {
         "installer-paths": {

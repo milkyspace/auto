@@ -48,7 +48,6 @@ if (PHP_SAPI !== 'cli') {
         $select = $_GET['city-select'];
         \setcookie('city_select', $select, \strtotime('today +1 year'));
         define("CITY_SELECT", "true");
-        LocalRedirect('/');
     }
 
     if ($_COOKIE['city_select'] == 'true') {
@@ -72,6 +71,10 @@ if (PHP_SAPI !== 'cli') {
             }
             define("CITY_IP", $cityCheck['NAME']);
         }
+    }
+
+    if($city == 'novosibirsk' && !empty($_GET['city-select'])){
+        LocalRedirect('/');
     }
 
     $uriParts = \explode('?', $_SERVER['REQUEST_URI']);
